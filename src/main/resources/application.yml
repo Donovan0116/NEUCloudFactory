@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    name: test  #数据库名
+    url: jdbc:mysql://localhost:3307/cloud_factory?useUnicode=true&amp;characterEncoding=utf-8 #url
+    username: root  #用户名
+    password: 123456  #密码
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: pers.donovan.cloudfactory.beans
+server:
+  port: 8443
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

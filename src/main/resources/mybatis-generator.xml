@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!--    <properties resource="generator.properties"/>-->
+    <context id="MySqlContext" targetRuntime="MyBatis3DynamicSQL">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 为模型生成序列化方法-->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!-- 为生成的Java模型创建一个toString方法 -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+<!--        <plugin type="com.github.pagehelper.PageInterceptor">-->
+<!--            <property name="helperDialect" value="mysql"/>-->
+<!--        </plugin>-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3307/cloud_factory?useUnicode=true&amp;characterEncoding=utf-8"
+                        userId="root"
+                        password="123456">
+            <!--解决mysql驱动升级到8.0后不生成指定数据库代码的问题-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+        <!--指定生成model的路径-->
+        <javaModelGenerator targetPackage="pers.donovan.cloudfactory.beans" targetProject="src\main\java"/>
+        <!--指定生成mapper接口的的路径-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="pers.donovan.cloudfactory.mapper"
+                             targetProject="src\main\java"/>
+        <!--生成全部表tableName设为%-->
+
+
+        <table tableName="administrator">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="all_device_id">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="bid">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="centre_device">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="contact_address">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="dealer">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="device_state">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="device_type">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="factory">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="factory_capacity">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="factory_device">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="order_entity">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="order_state">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="produce_plan">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="production">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="production_type">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="rented">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="suborder_entity">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="super_administrator">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="temp_produce_plan">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_administrator">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_centre_device">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_dealer">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_order_entity">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_production">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_my_device">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_temp_order">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_plan_list">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_rent_device">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="create_time"/>
+            <ignoreColumn column="update_time"/>
+        </table>
+        <table tableName="vo_production_name">
+            <generatedKey column="production_name" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="vo_devices_name">
+            <generatedKey column="device_name" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="vo_order_state_name">
+            <generatedKey column="order_state_name" sqlStatement="MySql" identity="true"/>
+        </table>
+    </context>
+
+
+</generatorConfiguration>
